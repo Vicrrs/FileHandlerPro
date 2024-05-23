@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import upload_file, download_file
-
+from . import views
 
 urlpatterns = [
-    path('upload/', upload_file, name='upload_file'),
-    path('download/<int:file_id>/', download_file, name='download_file'),
+    path('upload/', views.upload_file, name='upload_file'),
+    path('upload-form/', views.upload_file_form, name='upload_file_form'),
+    path('download/<int:file_id>/', views.download_file, name='download_file'),
 ]
