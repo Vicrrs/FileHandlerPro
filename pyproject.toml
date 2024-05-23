@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "filehandlerpro"
+version = "0.1.0"
+description = "CELERY + DJANGO + BABBITMQ -> Download e upload de arquivos"
+authors = ["Vicrrs <enricofermi2019@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
