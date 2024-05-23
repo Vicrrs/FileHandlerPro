@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8100
+    volumes:
+      - .:/code
+    ports:
+      - "8100:8100"
+    depends_on:
+      - rabbitmq
+
+  celery:
+    build: .
+    command: celery -A fileproject worker -l info
+    volumes:
+      - .:/code
+    depends_on:
+      - web
+      - rabbitmq
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "15682:15672"  # Porta da interface web do RabbitMQ alterada para evitar conflito
+      - "5673:5672"
