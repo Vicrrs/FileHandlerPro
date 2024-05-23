@@ -1,0 +1,116 @@
+1. **Atualizar o banco de dados de pacotes e atualizar o sistema:**
+   ```bash
+   sudo pacman -Syu
+   ```
+
+2. **Instalar um novo pacote:**
+   ```bash
+   sudo pacman -S nome_do_pacote
+   ```
+
+3. **Remover um pacote:**
+   ```bash
+   sudo pacman -R nome_do_pacote
+   ```
+
+4. **Procurar pacotes no repositório:**
+   ```bash
+   pacman -Ss termo_de_busca
+   ```
+
+5. **Limpar cache de pacotes antigos:**
+   ```bash
+   sudo pacman -Sc
+   ```
+
+6. **Atualizar informações sobre os pacotes (pacotes e repositórios):**
+   ```bash
+   sudo pacman -Sy
+   ```
+
+7. **Listar todos os pacotes instalados:**
+   ```bash
+   pacman -Q
+   ```
+
+8. **Atualizar todos os pacotes do sistema:**
+   ```bash
+   sudo pacman -Syu
+   ```
+
+9. **Verificar dependências quebradas:**
+   ```bash
+   pacman -Qdt
+   ```
+
+10. **Instalar pacotes AUR usando o `yay` (AUR Helper):**
+    ```bash
+    yay -S nome_do_pacote
+    ```
+
+11. **Remover pacotes AUR usando `yay`:**
+    ```bash
+    yay -R nome_do_pacote
+    ```
+
+12. **Listar todos os pacotes instalados do AUR:**
+    ```bash
+    yay -Qm
+    ```
+
+13. **Atualizar pacotes AUR usando `yay`:**
+    ```bash
+    yay -Syu
+    ```
+
+14. **Limpar o cache do AUR usando `yay`:**
+    ```bash
+    yay -Sc
+    ```
+
+15. **Listar os processos em execução:**
+    ```bash
+    ps aux
+    ```
+
+16. **Encerrar um processo:**
+    ```bash
+    kill PID_do_processo
+    ```
+
+17. **Verificar o uso de espaço em disco:**
+    ```bash
+    df -h
+    ```
+
+18. **Verificar informações sobre o sistema:**
+    ```bash
+    neofetch
+    ```
+
+### Para `sudo apt autoclean`
+
+```bash
+sudo pacman -Sc
+```
+
+```bash
+sudo pacman -Scc
+```
+
+### Para `sudo apt autoremove`
+
+```bash
+sudo pacman -Rns $(pacman -Qdtq)
+```
+
+### Para `sudo apt install -f`
+
+```bash
+sudo pacman -Syu
+```
+
+```bash
+sudo pacman -S nome_do_pacote
+```
+
